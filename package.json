@@ -2,8 +2,9 @@
   "name": "training-notifier",
   "version": "1.0.0",
   "description": "Lambda to pull training site updates",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
+    "start": "node -e 'require(\"./src/index.js\").handler({}).then(x => console.log(x));'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/nmcginn/training-notifier/issues"
   },
-  "homepage": "https://github.com/nmcginn/training-notifier#readme"
+  "homepage": "https://github.com/nmcginn/training-notifier#readme",
+  "dependencies": {
+    "aws-sdk": "^2.610.0",
+    "axios": "^0.19.2",
+    "moment": "^2.24.0"
+  }
 }
